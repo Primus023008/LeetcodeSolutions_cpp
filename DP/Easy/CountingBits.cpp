@@ -9,11 +9,8 @@ public:
         int count = 0;
         while (n > 0)
         {
-            if (n % 2 == 1)
-            {
-                count++;
-            }
-            n = n / 2;
+            count++;
+            n = n & (n - 1);
         }
 
         return count;
@@ -40,8 +37,8 @@ int main()
 
     for (int i = 0; i < ans.size(); i++)
     {
-        cout<<ans[i]<<" ";
+        cout << ans[i] << " ";
     }
-    
+
     // cout<<4%int(pow(2,0));
 }
